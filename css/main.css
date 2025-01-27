@@ -9,14 +9,26 @@ main {
     height:90vh;
 }
 
-.content_col {
-    display: block;
+.col-third {
+    width: 33%;
+}
+
+.col-two-third {
+    width: 66%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+#title-image {
+    width: 90%;
+    position: relative;
+    bottom: -16px;
+    z-index: 10;
 }
 
 .content_col content img {
-    aspect-ratio: 1/1;
-    width: auto;
-    object-fit: cover;
 }
 
 .window {
