@@ -1,25 +1,33 @@
 body {
     background-color: #e7c8ff;
-    margin: 0;   
+    margin: 0;
 }
 
 main {
     padding: 2.5vh 5vw 5vh 5vw;
-    margin: 0;
-    height: 90vh;
-    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
-.col-third {
-    width: 33%;
+.container {
+    display: flex;
+    justify-content: space-between;
 }
 
-.col-two-third {
-    width: 66%;
+.first-col {
+    flex-basis: 49%;
 }
 
-.col-half {
-    width: 50%;
+.second-col {
+    flex-basis: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-col-item {
+    flex-basis: 48%;
 }
 
 h1 {
@@ -27,27 +35,28 @@ h1 {
 }
 
 #title-image {
-    width: 90%;
+    width: 35%;
     position: relative;
     bottom: -16px;
     z-index: 10;
 }
 
 .window {
-    /* box-sizing: border-box; */
     border: 4px solid #331222;
     background-color: white;
     display: block;
     border-radius: 8px;
     filter: drop-shadow(-4px 4px 0px #331222);
+    position: relative;
 }
 
 .window h2 {
     position: relative;
+    margin: 0;
     padding: 6px;
     padding-left: 1.6em;
     font-family: headFont;
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 1.2em;
     border-bottom: 4px solid #331222;
 }
@@ -73,55 +82,54 @@ h1 {
     background-color: #662A4B;
 }
 
+.window.light-purple h2 {
+    color: #331222;
+    background-color: #F6C0F3;
+}
+
 .window h3 {
     font-family: headFont;
     color: #331222;
-    font-size: 1.25em;
-    padding: 6px;
+    font-size: 1.1em;
+    padding: 0 6px;
+    margin: 6px 0 0;
 }
 
 .window p {
     font-family: bodyFont;
     color: #331222;
-    margin: 6px;
+    margin: 3px 6px 6px;
     width: 100%;
 }
 
-.window p {
-    font-family: bodyFont;
-    color: #331222;
-    margin: 6px;
-}
-
-.window .content img {
-    aspect-ratio: 1/1;
-    width: max-content;
-    height: auto;
+#sitimage {
+    width: 45%;
+    display: block;
 }
 
 footer {
     background-color: #662a4b;
-    position: absolute;
+    position: fixed;
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     bottom:0;
-    
-    padding-left: 5vw;
-    padding-right: 5vw;
-
-    display:inline-block;
 }
 
 
 footer nav {
-    width:70vw;
     height: 10vh;
+    margin: 0 5vw;
     display: flex;
     align-items: center;
-    gap:10px;
+    justify-content: space-between;
 }
 
-footer nav .button { 
+#menubuttons {
+    display: flex;
+    gap: 10px;
+}
+
+#menubuttons .button { 
     width: 7.5vh;
     height: 7.5vh;
     background-size: cover; 
@@ -141,13 +149,13 @@ footer nav .button.workbutton {
 }
 
 footer #logo {
+    align-self: flex-end;
     width: 20vw; 
     height: auto;
-    bottom:1.25vh;
-    position:absolute;
-    right:10vh;
     filter: drop-shadow(-8px 8px 0px #331222);
     border: 5px #331222;
+    position:relative;
+    bottom:1.25vh;
 }
 
 @font-face {
