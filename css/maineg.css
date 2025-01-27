@@ -1,0 +1,195 @@
+body {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+  
+  }
+  
+  /*Header*/
+  header {
+    background-color: darkorange;
+    
+  }
+  
+  header nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  header nav .name{
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    
+  }
+  
+  header nav ul {
+    margin: 5px;
+    float: right;
+  }
+  
+  header nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 5px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+  
+  }
+  
+  header nav ul li a:hover:not(.active) {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  header nav ul li a.active {
+    text-decoration: none;
+    color: red;
+  }
+  
+  
+  /*main*/
+  main {
+    background-color: aquamarine;
+    flex-grow: 1;
+    display: table;
+    min-height:10rem;
+    background-image: url("../img/caboose.png");
+    background-size: 100px;
+  
+    transition:background-color 2s;
+    
+    animation: backgroundHelm 2s infinite;
+  }
+  
+  
+  main .ldo{
+    background-repeat: no-repeat;
+    background-image: url("../img/ldo.png");
+    background-size:contain;
+    background-position: center center;
+    display:table-cell;
+    vertical-align: bottom; /* change to middle to put text back over sticker*/
+    text-align: center;
+  }
+  
+  main h1 {
+    padding: 5px; /* remove this to remove the padding from the bottom*/
+    margin: 0px;
+    color: white;
+    text-shadow: 0 0.1em 0.1em #00000055;
+    opacity: 1;
+    animation:wiggle 2s infinite;
+  }
+  
+  @keyframes wiggle {
+    
+    0%{transform:rotate(0deg);
+      animation-timing-function: ease-out;}
+  
+    25%{transform:rotate(30deg);
+      animation-timing-function: ease-in-out;}
+  
+    75%{transform:rotate(-30deg);
+      animation-timing-function: ease-in;}
+  
+    100%{transform:rotate(0deg);
+      animation-timing-function: ease-in;}
+  
+  }
+  
+  
+  /*aside*/
+  aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    color: white;
+    padding: .5rem;
+    align-items: wrap;
+    align-content: center;
+    display: flex;
+    
+  }
+  
+  aside section {
+    flex-grow: 1;
+    background-color: #DDD;
+    border-radius: 1rem;
+    margin: .5rem;
+    padding: 1rem;
+    min-height: 6rem;
+    min-width: 6rem;
+    max-height:12rem;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    text-align: left;
+    display:table;
+    
+    
+  }
+  
+  section> div:first-child{
+    display:table-cell;
+    vertical-align: middle;
+    text-shadow:0 0.2rem 0.2rem #00000055
+  }
+  
+  section h2{
+    margin:0;
+    font-size:2.5rem;
+    
+  }
+  
+  section span{
+    font-size: 2rem;
+  }
+  
+  
+  aside section p {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+  
+  }
+  
+  
+  
+  footer {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #333333;
+    color: white;
+  }
+  
+  footer small{
+    margin:0.5rem;
+  }
+  
+  footer a{
+    color: white;
+    text-decoration: underline;
+    text-decoration-color:white;
+  }
+  
+  footer a:hover{
+    color: red;
+    text-decoration-color: white;
+  }
+  
+  
+  
+  

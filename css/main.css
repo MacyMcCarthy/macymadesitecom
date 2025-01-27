@@ -1,0 +1,155 @@
+
+
+body {
+    background-color: #e7c8ff;
+    margin: 0;
+    
+}
+
+main{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2.5vh;
+    padding-bottom: 5vh;
+    margin: 0;
+    height:90vh;
+    
+}
+
+.content_col{
+    display: block;
+}
+
+.content_col content img{
+    aspect-ratio: 1/1;
+    width: auto;
+    object-fit: cover;
+    
+}
+
+.window {
+    box-sizing: border-box;
+    border: 4px solid #331222;
+    border-color: #331222;
+    background-color: white;
+    display: block;
+    border-radius: 8px;
+    filter: drop-shadow(-4px 4px 0px #331222);
+
+}
+
+
+.window .head{
+    display:flex;
+    width: auto;
+    padding:6px;
+
+    font-family: headFont;
+    color: white;
+    font-size: 28px;
+
+    background-color: #662A4B;
+    border-bottom: 4px solid #331222;
+    
+}
+
+.window .head .icon{
+    width: 5vh;
+    /*background-color: antiquewhite;*/
+    background-image: url("../imgs/icons/home.svg");
+    background-size: cover; 
+    background-position: center center;
+    aspect-ratio: 1/1;
+}
+
+.window .body_head{
+    font-family: headFont;
+    color: #331222;
+    font-size: 20px;
+    padding: 6px;
+}
+
+.window .content p{
+    font-family: bodyFont;
+    color: #331222;
+    padding: 6px;
+    width: 100%;
+}
+
+.window p{
+    font-family: bodyFont;
+    color: #331222;
+    padding: 6px;
+}
+
+.window .content img{
+    aspect-ratio: 1/1;
+    width: max-content;
+    height: auto;
+}
+
+
+footer{
+    
+    background-color: #662a4b;
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+    bottom:0;
+    
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    display:inline-block;
+
+    
+
+}
+
+
+footer nav{
+    
+    width:70vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    
+}
+
+footer nav .button{ 
+
+    /*aspect-ratio: 1/1;*/
+
+    width: 7.5vh;
+    height: 7.5vh;
+    
+    
+    /*background-color: antiquewhite;*/
+    background-image: url("../imgs/icons/home.svg");
+    background-size: cover; 
+    background-position: center center;
+    
+    
+}
+
+footer #logo{
+    width: 20vw; 
+    height: auto;
+    bottom:1.25vh;
+    position:absolute;
+    right:10vh;
+    filter: drop-shadow(-8px 8px 0px #331222);
+    border: 5px #331222;
+    
+    
+}
+
+@font-face {
+    font-family: headFont;
+    src: url(../fonts/MadimiOne-Regular.ttf);
+}
+@font-face {
+    font-family: bodyFont;
+    src: url(../fonts/SourceCodePro-Regular.ttf);
+}
