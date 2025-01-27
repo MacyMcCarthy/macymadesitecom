@@ -6,7 +6,8 @@ body {
 main {
     padding: 2.5vh 5vw 5vh 5vw;
     margin: 0;
-    height:90vh;
+    height: 90vh;
+    overflow: auto;
 }
 
 .col-third {
@@ -21,6 +22,10 @@ main {
     width: 50%;
 }
 
+h1 {
+    margin: 0;
+}
+
 #title-image {
     width: 90%;
     position: relative;
@@ -28,59 +33,64 @@ main {
     z-index: 10;
 }
 
-.content_col content img {
-}
-
 .window {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border: 4px solid #331222;
-    /* border-color: #331222; */
     background-color: white;
     display: block;
     border-radius: 8px;
     filter: drop-shadow(-4px 4px 0px #331222);
 }
 
-.window .head {
-    display:flex;
-    width: auto;
-    padding:6px;
-
+.window h2 {
+    position: relative;
+    padding: 6px;
+    padding-left: 1.6em;
     font-family: headFont;
-    color: white;
-    font-size: 28px;
-
-    background-color: #662A4B;
+    font-size: 1.75em;
+    line-height: 1.2em;
     border-bottom: 4px solid #331222;
 }
 
-.window .head .icon {
-    width: 5vh;
-    /*background-color: antiquewhite;*/
-    background-image: url("../imgs/icons/home.svg");
-    background-size: cover; 
-    background-position: center center;
+.window h2::before {
+    display: inline-block;
+    position: absolute;
+    background-image: url(../imgs/icons/home.svg);
+    background-size: 100% 100%;
+    height: 1.2em;
     aspect-ratio: 1/1;
+    width: auto;
+    content: "";
+    left: 6px;
 }
 
-.window .body_head {
+.window span.highlight {
+    color: #E0407D;
+}
+
+.window.dark-purple h2 {
+    color: white;
+    background-color: #662A4B;
+}
+
+.window h3 {
     font-family: headFont;
     color: #331222;
-    font-size: 20px;
+    font-size: 1.25em;
     padding: 6px;
 }
 
-.window .content p {
+.window p {
     font-family: bodyFont;
     color: #331222;
-    padding: 6px;
+    margin: 6px;
     width: 100%;
 }
 
 .window p {
     font-family: bodyFont;
     color: #331222;
-    padding: 6px;
+    margin: 6px;
 }
 
 .window .content img {
