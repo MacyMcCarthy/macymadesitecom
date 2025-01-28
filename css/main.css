@@ -5,7 +5,7 @@ body {
 
 main {
     padding: 2.5vh 5vw 5vh 5vw;
-    /* height: 90vh; */
+    height: 82.5vh;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -110,7 +110,6 @@ h1 {
     font-family: bodyFont;
     color: #331222;
     margin: 3px 6px 6px;
-    width: 100%;
 }
 
 .window#intro {
@@ -124,8 +123,14 @@ h1 {
     flex-grow: 1;
 }
 
+.window#intro div p {
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+
 .window#intro div .img-container {
-    width: 100%;
+    flex-basis: 50%;
+    flex-grow: 0;
     height: auto;
     display: block;
     align-self: flex-end;
@@ -179,7 +184,7 @@ footer nav .button.workbutton {
 
 footer #logo {
     align-self: flex-end;
-    width: 10%; 
+    width: 20vh; 
     height: auto;
     filter: drop-shadow(-8px 8px 0px #331222);
     border: 5px #331222;
@@ -194,4 +199,42 @@ footer #logo {
 @font-face {
     font-family: bodyFont;
     src: url(../fonts/SourceCodePro-Regular.ttf);
+}
+
+@media screen and (max-width:1023px){
+    main {
+        display: block;
+        height: initial;
+        padding-bottom: 15vh;
+    }
+
+    .first-col {
+        margin: 0;
+    }
+
+    .second-col {
+        display: block;
+    }
+
+    .second-col-item {
+        display: block;
+    }
+
+    .second-col-item.container {
+        display: block;
+    }
+
+    .window {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .window#intro {
+        display: block;
+    }
+
+    .window#intro div {
+        display: block;
+    }
 }
