@@ -20,7 +20,7 @@ Latest compiled JavaScript
 <body>
     <main>
         <div class="first-col">
-            <h1><img src="imgs/logo/macy-mccarthy.svg" alt="MacyMcCarthy" id="title-image"></h1>
+            <h1><img src="imgs/logo/macy-mccarthy.svg" alt="Macy McCarthy" id="title-image"></h1>
             <div class="window dark-purple" id="intro">
                 <h2>
                     ux<span class="highlight">_</span>design<span class="highlight">;</span>
@@ -47,21 +47,24 @@ Latest compiled JavaScript
             </div>
         </div>
         <div class="second-col">
-            <div class="second-col-item window light-purple">
+            <div class="second-col-item window light-purple" style="display: flex; flex-direction: column;">
                 <h2>nifty</h2>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fuga tenetur obcaecati libero minima? Libero ratione, aspernatur odit nam obcaecati sunt dignissimos cupiditate quaerat consequuntur, facilis consequatur numquam perspiciatis qui!</p>
+                <div style="display: flex; justify-content: center; align-items: center; flex-grow: 1">
+                    <p style="align-content: center">This website is currently under construction!</p>
+                </div>
+                <!-- <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fuga tenetur obcaecati libero minima? Libero ratione, aspernatur odit nam obcaecati sunt dignissimos cupiditate quaerat consequuntur, facilis consequatur numquam perspiciatis qui!</p> -->
             </div>
             <div class="second-col-item container">
                 <div class="second-col-item window light-purple">
                     <h2>geo<span class="highlight">_</span>joy</h2>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia, eligendi est voluptas ea doloribus esse exercitationem, nobis vero officia inventore quas tempore fugiat sed repudiandae ab, molestiae quis. Id.</p>
+                    <!-- <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam eveniet rerum? Commodi fugiat, eius modi laborum nostrum id mollitia quia hic, asperiores laboriosam, at in sit harum quidem quos!</p> -->
                 </div>
                 <div class="second-col-item window light-purple">
                     <h2>biome</h2>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia, eligendi est voluptas ea doloribus esse exercitationem, nobis vero officia inventore quas tempore fugiat sed repudiandae ab, molestiae quis. Id.</p>
+                    <!-- <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia, eligendi est voluptas ea doloribus esse exercitationem, nobis vero officia inventore quas tempore fugiat sed repudiandae ab, molestiae quis. Id.</p> -->
                 </div>
             </div>
         </div>
@@ -71,9 +74,25 @@ Latest compiled JavaScript
         <nav>
             <a href="/." id="logo"><img src="imgs/logo/mm_logo_stroke.svg"></a>
             <div id="menubuttons">
-                <a href="about.html" id="about" class="button homebutton"></a>
-                <a href="work.html" id="work" class="button aboutbutton"></a>
-                <a href="contact.html" id="contact" class="button workbutton"></a>
+                <a href="" id="about" class="button homebutton"></a>
+                <div>    
+                    <div id="contact-container">
+                        <a href="" id="work" class="button aboutbutton"></a>
+                        <div id="contactpopup" class="hide">
+                            <div class="contactdata">
+                                <p><span class="icon linkedin-icon"></span><a href="https://www.linkedin.com/in/macy-mccarthy-098173295/">Macy McCarthy</a></p>
+                                <p><span class="icon phone-icon"></span><a href="tel:+1(404)585-0946">+1(404)585-0946</a></p>
+                                <p><span class="icon envelope-icon"></span><a href="mailto:macymccarthy.design@gmail.com">macymccarthy<br>
+                                    .design<br>
+                                    @gmail.com</a></p>
+                            </div>
+                            <div class="contactimg">
+                                <img src="imgs/parts/inside_bottom.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" id="contact" class="button workbutton"></a>
             </div>
         </nav>
     </footer>

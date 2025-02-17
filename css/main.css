@@ -9,6 +9,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    z-index: 0;
+}
+
+.hide {
+    display:none;
 }
 
 .container {
@@ -49,7 +54,7 @@ h1 {
     display: block;
     position: relative;
     bottom: -16px;
-    z-index: 10;
+    z-index: 1;
 }
 
 .window {
@@ -84,7 +89,7 @@ h1 {
     left: 6px;
 }
 
-.window span.highlight {
+span.highlight {
     color: #E0407D;
 }
 
@@ -147,6 +152,7 @@ footer {
     height: 10vh;
     width: 100%;
     bottom:0;
+    z-index: 1;
 }
 
 
@@ -166,6 +172,7 @@ footer nav {
 #menubuttons .button { 
     width: 7.5vh;
     height: 7.5vh;
+    display: block;
     background-size: cover; 
     background-position: center center;
 }
@@ -180,6 +187,91 @@ footer nav .button.aboutbutton {
 
 footer nav .button.workbutton {
     background-image: url("../imgs/icons/work.svg");
+    position: relative;
+    left: 7.5vh;
+}
+
+.icon {
+    display: inline-block;
+    background-size: cover;
+    background-position: center center;
+    height: 1.2em;
+    aspect-ratio: 1/1;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.linkedin-icon {
+    background-image: url("../imgs/icons/linkedin-brands-solid.svg");
+}
+
+.phone-icon {
+    background-image: url("../imgs/icons/phone-solid.svg");
+}
+
+.envelope-icon {
+    background-image: url("../imgs/icons/envelope-solid.svg");
+}
+
+#contact-container {
+    position: absolute;
+}
+
+#contactpopup {
+    position: absolute;
+    bottom: 100%;
+    width: 600%;
+    padding-bottom: 20px;
+}
+
+#contactpopup:hover {
+    display: block;
+}
+
+#work:hover + #contactpopup {
+    display: block;
+}
+
+#contactpopup .contactimg img {
+    display: block;
+    filter: drop-shadow(-4px 4px 0px #331222);
+    width: 100%;
+}
+
+#contactpopup .contactdata {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contactpopup .contactdata p:first-child {
+    margin-top: 0;
+}
+
+#contactpopup .contactdata p:last-child {
+    padding-bottom: 30px;
+}
+
+#contactpopup .contactdata p {
+    font-family: bodyFont;
+    color: #331222;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#contactpopup .contactdata a {
+    color: #331222;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#contactpopup .contactdata a:hover {
+    color: #E0407D;
 }
 
 footer #logo {
