@@ -157,7 +157,7 @@ footer {
 
 
 footer nav {
-    height: 10vh;
+    height: inherit;
     margin: 0 5vw;
     display: flex;
     align-items: center;
@@ -237,6 +237,14 @@ footer nav .button.aboutbutton {
 #contactpopup:hover {
     display: block;
 }
+
+/* #work:hover {
+    transform: translate(0,-5px);
+}
+
+#work:checked {
+    transform: translate(0,0) scale(1.1);
+} */
 
 #work:checked + #contactpopup,
 #work:hover + #contactpopup {
@@ -329,14 +337,49 @@ footer #logo {
     .window {
         margin-bottom: 20px;
     }
+
+    #contactpopup {
+        width: 50vw;
+        left: -5vw;
+        font-size: 1.5em;
+    }
 }
 
-@media screen and (max-width: 575px){
+@media screen and (max-width: 767px){
+    #contactpopup {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px){
     .window#intro {
         display: block;
     }
 
     .window#intro div {
         display: block;
+    }
+
+    footer {
+        height: 9vh;
+    }
+
+    footer #logo {
+        width: 15vh;
+    }
+
+    #menubuttons .button {
+        width: 6.5vh;
+        height: 6.5vh;
+    }
+
+    footer nav .button.workbutton {
+        left: 6.5vh;
+    }
+
+    #contactpopup {
+        width: 90vw;
+        left: -300%;
+        font-size: 1.2em;
     }
 }
