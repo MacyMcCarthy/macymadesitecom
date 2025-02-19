@@ -181,10 +181,6 @@ footer nav .button.homebutton {
     background-image: url("../imgs/icons/home.svg");
 }
 
-footer nav .button.aboutbutton {
-    background-image: url("../imgs/icons/about.svg");
-}
-
 footer nav .button.workbutton {
     background-image: url("../imgs/icons/work.svg");
     position: relative;
@@ -215,6 +211,20 @@ footer nav .button.workbutton {
 
 #contact-container {
     position: absolute;
+
+    display: grid;
+    grid-template-columns: 7.5vh auto;
+    justify-content: end;
+}
+
+footer nav .button.aboutbutton {
+    background-image: url("../imgs/icons/about.svg");
+
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #662a4b;
+    margin: 0;
+    cursor: pointer;
 }
 
 #contactpopup {
@@ -228,6 +238,7 @@ footer nav .button.workbutton {
     display: block;
 }
 
+#work:checked + #contactpopup,
 #work:hover + #contactpopup {
     display: block;
 }
