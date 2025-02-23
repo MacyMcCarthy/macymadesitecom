@@ -183,8 +183,8 @@ footer nav .button.homebutton {
 
 footer nav .button.workbutton {
     background-image: url("../imgs/icons/work.svg");
-    position: relative;
-    left: 7.5vh;
+    /* position: relative;
+    left: 7.5vh; */
 }
 
 .icon {
@@ -292,6 +292,24 @@ footer nav .button.aboutbutton {
     color: #E0407D;
 }
 
+#portfolio-container {
+    position: relative;
+    left: 7.5vh;
+    display: flex;
+    align-items: center;
+}
+
+#portfolio-container p {
+    margin: 0;
+    margin-left: 5px;
+    color: white;
+    font-family: headFont;
+}
+
+#portfolio-container p br {
+    display: none;
+}
+
 footer #logo {
     align-self: flex-end;
     width: 20vh; 
@@ -373,13 +391,24 @@ footer #logo {
         height: 6.5vh;
     }
 
-    footer nav .button.workbutton {
-        left: 6.5vh;
-    }
-
     #contactpopup {
         width: 90vw;
         left: -300%;
         font-size: 1.2em;
+    }
+
+    #portfolio-container {
+        left: 6.5vh;
+        font-size: 0.7em;
+    }
+
+    #portfolio-container p br {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 374px){
+    #portfolio-container {
+        font-size: 0.55em;
     }
 }
